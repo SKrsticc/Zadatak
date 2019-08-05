@@ -17,7 +17,7 @@ namespace Zadatak
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public DBElementP()
         {
-            this.DBElementCs = new HashSet<DBElementC>();
+            this.DBElementC = new HashSet<DBElementC>();
         }
     
         public int RedniBroj { get; set; }
@@ -26,6 +26,6 @@ namespace Zadatak
         public int p { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<DBElementC> DBElementCs { get; set; }
+        public virtual ICollection<DBElementC> DBElementC { get; set; }
     }
 }

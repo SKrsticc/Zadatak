@@ -28,7 +28,7 @@ namespace Zadatak
             dbelP.p = p;
             for (int i = 0; i < elP.Elementi.Length; i++)
             {
-                dbelP.DBElementCs.Add(PretvoriObjekat(elP.Elementi[i], elP.IdentifikacioniKod));
+                dbelP.DBElementC.Add(PretvoriObjekat(elP.Elementi[i], elP.IdentifikacioniKod));
             }
             
             return dbelP;
