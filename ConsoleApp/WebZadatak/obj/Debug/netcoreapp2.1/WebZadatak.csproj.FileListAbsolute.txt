@@ -1,0 +1,60 @@
+C:\Users\stefa\source\repos\WebZadatak\bin\Debug\netcoreapp2.1\WebZadatak.deps.json
+C:\Users\stefa\source\repos\WebZadatak\bin\Debug\netcoreapp2.1\WebZadatak.runtimeconfig.json
+C:\Users\stefa\source\repos\WebZadatak\bin\Debug\netcoreapp2.1\WebZadatak.runtimeconfig.dev.json
+C:\Users\stefa\source\repos\WebZadatak\bin\Debug\netcoreapp2.1\WebZadatak.dll
+C:\Users\stefa\source\repos\WebZadatak\bin\Debug\netcoreapp2.1\WebZadatak.pdb
+C:\Users\stefa\source\repos\WebZadatak\obj\Debug\netcoreapp2.1\WebZadatak.csprojAssemblyReference.cache
+C:\Users\stefa\source\repos\WebZadatak\obj\Debug\netcoreapp2.1\WebZadatak.csproj.CoreCompileInputs.cache
+C:\Users\stefa\source\repos\WebZadatak\obj\Debug\netcoreapp2.1\WebZadatak.RazorAssemblyInfo.cache
+C:\Users\stefa\source\repos\WebZadatak\obj\Debug\netcoreapp2.1\WebZadatak.RazorAssemblyInfo.cs
+C:\Users\stefa\source\repos\WebZadatak\obj\Debug\netcoreapp2.1\WebZadatak.AssemblyInfoInputs.cache
+C:\Users\stefa\source\repos\WebZadatak\obj\Debug\netcoreapp2.1\WebZadatak.AssemblyInfo.cs
+C:\Users\stefa\source\repos\WebZadatak\obj\Debug\netcoreapp2.1\WebZadatak.RazorTargetAssemblyInfo.cache
+C:\Users\stefa\source\repos\WebZadatak\obj\Debug\netcoreapp2.1\WebZadatak.dll
+C:\Users\stefa\source\repos\WebZadatak\obj\Debug\netcoreapp2.1\WebZadatak.pdb
+C:\Users\stefa\source\repos\WebZadatak\bin\Debug\netcoreapp2.1\Zadatak.exe
+C:\Users\stefa\source\repos\WebZadatak\bin\Debug\netcoreapp2.1\EntityFramework.dll
+C:\Users\stefa\source\repos\WebZadatak\bin\Debug\netcoreapp2.1\Zadatak.pdb
+C:\Users\stefa\source\repos\WebZadatak\bin\Debug\netcoreapp2.1\Zadatak.exe.config
+C:\Users\stefa\source\repos\WebZadatak\bin\Debug\netcoreapp2.1\EntityFramework.xml
+C:\Users\stefa\source\repos\WebZadatak\obj\Debug\netcoreapp2.1\WebZadatak.csproj.CopyComplete
+C:\Users\stefa\Desktop\Zadatak\WebZadatak\obj\Debug\netcoreapp2.1\WebZadatak.dll
+C:\Users\stefa\Desktop\Zadatak\WebZadatak\obj\Debug\netcoreapp2.1\WebZadatak.pdb
+C:\Users\stefa\Desktop\Zadatak\WebZadatak\bin\Debug\netcoreapp2.1\WebZadatak.deps.json
+C:\Users\stefa\Desktop\Zadatak\WebZadatak\bin\Debug\netcoreapp2.1\WebZadatak.runtimeconfig.json
+C:\Users\stefa\Desktop\Zadatak\WebZadatak\bin\Debug\netcoreapp2.1\WebZadatak.runtimeconfig.dev.json
+C:\Users\stefa\Desktop\Zadatak\WebZadatak\bin\Debug\netcoreapp2.1\WebZadatak.dll
+C:\Users\stefa\Desktop\Zadatak\WebZadatak\bin\Debug\netcoreapp2.1\WebZadatak.pdb
+C:\Users\stefa\Desktop\Zadatak\WebZadatak\bin\Debug\netcoreapp2.1\Zadatak.exe
+C:\Users\stefa\Desktop\Zadatak\WebZadatak\bin\Debug\netcoreapp2.1\EntityFramework.dll
+C:\Users\stefa\Desktop\Zadatak\WebZadatak\bin\Debug\netcoreapp2.1\Zadatak.pdb
+C:\Users\stefa\Desktop\Zadatak\WebZadatak\bin\Debug\netcoreapp2.1\Zadatak.exe.config
+C:\Users\stefa\Desktop\Zadatak\WebZadatak\bin\Debug\netcoreapp2.1\EntityFramework.xml
+C:\Users\stefa\Desktop\Zadatak\WebZadatak\obj\Debug\netcoreapp2.1\WebZadatak.csprojAssemblyReference.cache
+C:\Users\stefa\Desktop\Zadatak\WebZadatak\obj\Debug\netcoreapp2.1\WebZadatak.csproj.CoreCompileInputs.cache
+C:\Users\stefa\Desktop\Zadatak\WebZadatak\obj\Debug\netcoreapp2.1\WebZadatak.RazorAssemblyInfo.cache
+C:\Users\stefa\Desktop\Zadatak\WebZadatak\obj\Debug\netcoreapp2.1\WebZadatak.RazorAssemblyInfo.cs
+C:\Users\stefa\Desktop\Zadatak\WebZadatak\obj\Debug\netcoreapp2.1\WebZadatak.AssemblyInfoInputs.cache
+C:\Users\stefa\Desktop\Zadatak\WebZadatak\obj\Debug\netcoreapp2.1\WebZadatak.AssemblyInfo.cs
+C:\Users\stefa\Desktop\Zadatak\WebZadatak\obj\Debug\netcoreapp2.1\WebZadatak.RazorTargetAssemblyInfo.cache
+C:\Users\stefa\Desktop\Zadatak\WebZadatak\obj\Debug\netcoreapp2.1\WebZadatak.csproj.CopyComplete
+C:\Users\stefa\Desktop\New folder\Zadatak\ConsoleApp\WebZadatak\obj\Debug\netcoreapp2.1\WebZadatak.csprojAssemblyReference.cache
+C:\Users\stefa\Desktop\New folder\Zadatak\ConsoleApp\WebZadatak\obj\Debug\netcoreapp2.1\WebZadatak.csproj.CoreCompileInputs.cache
+C:\Users\stefa\Desktop\New folder\Zadatak\ConsoleApp\WebZadatak\obj\Debug\netcoreapp2.1\WebZadatak.RazorAssemblyInfo.cache
+C:\Users\stefa\Desktop\New folder\Zadatak\ConsoleApp\WebZadatak\obj\Debug\netcoreapp2.1\WebZadatak.RazorAssemblyInfo.cs
+C:\Users\stefa\Desktop\New folder\Zadatak\ConsoleApp\WebZadatak\obj\Debug\netcoreapp2.1\WebZadatak.AssemblyInfoInputs.cache
+C:\Users\stefa\Desktop\New folder\Zadatak\ConsoleApp\WebZadatak\obj\Debug\netcoreapp2.1\WebZadatak.AssemblyInfo.cs
+C:\Users\stefa\Desktop\New folder\Zadatak\ConsoleApp\WebZadatak\obj\Debug\netcoreapp2.1\WebZadatak.dll
+C:\Users\stefa\Desktop\New folder\Zadatak\ConsoleApp\WebZadatak\obj\Debug\netcoreapp2.1\WebZadatak.pdb
+C:\Users\stefa\Desktop\New folder\Zadatak\ConsoleApp\WebZadatak\bin\Debug\netcoreapp2.1\WebZadatak.deps.json
+C:\Users\stefa\Desktop\New folder\Zadatak\ConsoleApp\WebZadatak\bin\Debug\netcoreapp2.1\WebZadatak.runtimeconfig.json
+C:\Users\stefa\Desktop\New folder\Zadatak\ConsoleApp\WebZadatak\bin\Debug\netcoreapp2.1\WebZadatak.runtimeconfig.dev.json
+C:\Users\stefa\Desktop\New folder\Zadatak\ConsoleApp\WebZadatak\bin\Debug\netcoreapp2.1\WebZadatak.dll
+C:\Users\stefa\Desktop\New folder\Zadatak\ConsoleApp\WebZadatak\bin\Debug\netcoreapp2.1\WebZadatak.pdb
+C:\Users\stefa\Desktop\New folder\Zadatak\ConsoleApp\WebZadatak\bin\Debug\netcoreapp2.1\Zadatak.exe
+C:\Users\stefa\Desktop\New folder\Zadatak\ConsoleApp\WebZadatak\bin\Debug\netcoreapp2.1\EntityFramework.dll
+C:\Users\stefa\Desktop\New folder\Zadatak\ConsoleApp\WebZadatak\bin\Debug\netcoreapp2.1\Zadatak.pdb
+C:\Users\stefa\Desktop\New folder\Zadatak\ConsoleApp\WebZadatak\bin\Debug\netcoreapp2.1\Zadatak.exe.config
+C:\Users\stefa\Desktop\New folder\Zadatak\ConsoleApp\WebZadatak\bin\Debug\netcoreapp2.1\EntityFramework.xml
+C:\Users\stefa\Desktop\New folder\Zadatak\ConsoleApp\WebZadatak\obj\Debug\netcoreapp2.1\WebZadatak.RazorTargetAssemblyInfo.cache
+C:\Users\stefa\Desktop\New folder\Zadatak\ConsoleApp\WebZadatak\obj\Debug\netcoreapp2.1\WebZadatak.csproj.CopyComplete

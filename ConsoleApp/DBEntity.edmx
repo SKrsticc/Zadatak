@@ -1,0 +1,143 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="ZadatakModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="DBElementC">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Grupa" Type="char" MaxLength="1" />
+          <Property Name="Vrednost" Type="int" />
+          <Property Name="IdElementP" Type="nvarchar" MaxLength="38" Nullable="false" />
+        </EntityType>
+        <EntityType Name="DBElementP">
+          <Key>
+            <PropertyRef Name="IdentifikacioniKod" />
+          </Key>
+          <Property Name="RedniBroj" Type="int" Nullable="false" />
+          <Property Name="IdentifikacioniKod" Type="nvarchar" MaxLength="38" Nullable="false" />
+          <Property Name="DateAndTimeAdded" Type="datetime" />
+          <Property Name="p" Type="int" Nullable="false" />
+        </EntityType>
+        <Association Name="FK_ElementC_ElementP">
+          <End Role="DBElementP" Type="Self.DBElementP" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="DBElementC" Type="Self.DBElementC" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="DBElementP">
+              <PropertyRef Name="IdentifikacioniKod" />
+            </Principal>
+            <Dependent Role="DBElementC">
+              <PropertyRef Name="IdElementP" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="ZadatakModelStoreContainer">
+          <EntitySet Name="DBElementC" EntityType="Self.DBElementC" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="DBElementP" EntityType="Self.DBElementP" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK_ElementC_ElementP" Association="Self.FK_ElementC_ElementP">
+            <End Role="DBElementP" EntitySet="DBElementP" />
+            <End Role="DBElementC" EntitySet="DBElementC" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="ZadatakModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="DBElementC">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Grupa" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="Vrednost" Type="Int32" />
+          <Property Name="IdElementP" Type="String" MaxLength="38" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="DBElementP" Relationship="Self.FK_ElementC_ElementP" FromRole="DBElementC" ToRole="DBElementP" />
+        </EntityType>
+        <EntityType Name="DBElementP">
+          <Key>
+            <PropertyRef Name="IdentifikacioniKod" />
+          </Key>
+          <Property Name="RedniBroj" Type="Int32" Nullable="false" />
+          <Property Name="IdentifikacioniKod" Type="String" MaxLength="38" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="DateAndTimeAdded" Type="DateTime" Precision="3" />
+          <NavigationProperty Name="DBElementCs" Relationship="Self.FK_ElementC_ElementP" FromRole="DBElementP" ToRole="DBElementC" />
+          <Property Name="p" Type="Int32" Nullable="false" />
+        </EntityType>
+        <Association Name="FK_ElementC_ElementP">
+          <End Role="DBElementP" Type="Self.DBElementP" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="DBElementC" Type="Self.DBElementC" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="DBElementP">
+              <PropertyRef Name="IdentifikacioniKod" />
+            </Principal>
+            <Dependent Role="DBElementC">
+              <PropertyRef Name="IdElementP" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="ZadatakEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="DBElementCs" EntityType="Self.DBElementC" />
+          <EntitySet Name="DBElementPs" EntityType="Self.DBElementP" />
+          <AssociationSet Name="FK_ElementC_ElementP" Association="Self.FK_ElementC_ElementP">
+            <End Role="DBElementP" EntitySet="DBElementPs" />
+            <End Role="DBElementC" EntitySet="DBElementCs" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="ZadatakModelStoreContainer" CdmEntityContainer="ZadatakEntities">
+          <EntitySetMapping Name="DBElementCs">
+            <EntityTypeMapping TypeName="ZadatakModel.DBElementC">
+              <MappingFragment StoreEntitySet="DBElementC">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Grupa" ColumnName="Grupa" />
+                <ScalarProperty Name="Vrednost" ColumnName="Vrednost" />
+                <ScalarProperty Name="IdElementP" ColumnName="IdElementP" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="DBElementPs">
+            <EntityTypeMapping TypeName="ZadatakModel.DBElementP">
+              <MappingFragment StoreEntitySet="DBElementP">
+                <ScalarProperty Name="p" ColumnName="p" />
+                <ScalarProperty Name="RedniBroj" ColumnName="RedniBroj" />
+                <ScalarProperty Name="IdentifikacioniKod" ColumnName="IdentifikacioniKod" />
+                <ScalarProperty Name="DateAndTimeAdded" ColumnName="DateAndTimeAdded" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

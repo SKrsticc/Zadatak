@@ -1,0 +1,55 @@
+C:\Users\stefa\source\repos\Zadatak\bin\Debug\Zadatak.exe.config
+C:\Users\stefa\source\repos\Zadatak\bin\Debug\Zadatak.exe
+C:\Users\stefa\source\repos\Zadatak\bin\Debug\Zadatak.pdb
+C:\Users\stefa\source\repos\Zadatak\obj\Debug\Zadatak.csprojAssemblyReference.cache
+C:\Users\stefa\source\repos\Zadatak\obj\Debug\Zadatak.csproj.CoreCompileInputs.cache
+C:\Users\stefa\source\repos\Zadatak\obj\Debug\Zadatak.exe
+C:\Users\stefa\source\repos\Zadatak\obj\Debug\Zadatak.pdb
+C:\Users\stefa\source\repos\Zadatak\bin\Debug\Newtonsoft.Json.dll
+C:\Users\stefa\source\repos\Zadatak\bin\Debug\Newtonsoft.Json.xml
+C:\Users\stefa\source\repos\Zadatak\obj\Debug\Zadatak.csproj.CopyComplete
+C:\Users\stefa\source\repos\ZadatakEF\bin\Debug\Zadatak.exe.config
+C:\Users\stefa\source\repos\ZadatakEF\bin\Debug\Zadatak.exe
+C:\Users\stefa\source\repos\ZadatakEF\bin\Debug\Zadatak.pdb
+C:\Users\stefa\source\repos\ZadatakEF\bin\Debug\EntityFramework.dll
+C:\Users\stefa\source\repos\ZadatakEF\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\stefa\source\repos\ZadatakEF\bin\Debug\Newtonsoft.Json.dll
+C:\Users\stefa\source\repos\ZadatakEF\bin\Debug\EntityFramework.xml
+C:\Users\stefa\source\repos\ZadatakEF\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\stefa\source\repos\ZadatakEF\bin\Debug\Newtonsoft.Json.xml
+C:\Users\stefa\source\repos\ZadatakEF\obj\Debug\Zadatak.csprojAssemblyReference.cache
+C:\Users\stefa\source\repos\ZadatakEF\obj\Debug\Zadatak.csproj.CoreCompileInputs.cache
+C:\Users\stefa\source\repos\ZadatakEF\obj\Debug\Zadatak.csproj.CopyComplete
+C:\Users\stefa\source\repos\ZadatakEF\obj\Debug\Zadatak.exe
+C:\Users\stefa\source\repos\ZadatakEF\obj\Debug\Zadatak.pdb
+C:\Users\stefa\source\repos\ZadatakEF\bin\Debug\System.Data.SqlClient.dll
+C:\Users\stefa\Desktop\Zadatak\ConsoleApp\bin\Debug\Zadatak.exe.config
+C:\Users\stefa\Desktop\Zadatak\ConsoleApp\bin\Debug\Zadatak.exe
+C:\Users\stefa\Desktop\Zadatak\ConsoleApp\bin\Debug\Zadatak.pdb
+C:\Users\stefa\Desktop\Zadatak\ConsoleApp\bin\Debug\EntityFramework.dll
+C:\Users\stefa\Desktop\Zadatak\ConsoleApp\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\stefa\Desktop\Zadatak\ConsoleApp\bin\Debug\Newtonsoft.Json.dll
+C:\Users\stefa\Desktop\Zadatak\ConsoleApp\bin\Debug\System.Data.SqlClient.dll
+C:\Users\stefa\Desktop\Zadatak\ConsoleApp\bin\Debug\EntityFramework.xml
+C:\Users\stefa\Desktop\Zadatak\ConsoleApp\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\stefa\Desktop\Zadatak\ConsoleApp\bin\Debug\Newtonsoft.Json.xml
+C:\Users\stefa\Desktop\Zadatak\ConsoleApp\obj\Debug\Zadatak.csprojAssemblyReference.cache
+C:\Users\stefa\Desktop\Zadatak\ConsoleApp\obj\Debug\Zadatak.csproj.CoreCompileInputs.cache
+C:\Users\stefa\Desktop\Zadatak\ConsoleApp\obj\Debug\Zadatak.csproj.CopyComplete
+C:\Users\stefa\Desktop\Zadatak\ConsoleApp\obj\Debug\Zadatak.exe
+C:\Users\stefa\Desktop\Zadatak\ConsoleApp\obj\Debug\Zadatak.pdb
+C:\Users\stefa\Desktop\New folder\Zadatak\ConsoleApp\bin\Debug\Zadatak.exe.config
+C:\Users\stefa\Desktop\New folder\Zadatak\ConsoleApp\bin\Debug\Zadatak.exe
+C:\Users\stefa\Desktop\New folder\Zadatak\ConsoleApp\bin\Debug\Zadatak.pdb
+C:\Users\stefa\Desktop\New folder\Zadatak\ConsoleApp\bin\Debug\EntityFramework.dll
+C:\Users\stefa\Desktop\New folder\Zadatak\ConsoleApp\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\stefa\Desktop\New folder\Zadatak\ConsoleApp\bin\Debug\Newtonsoft.Json.dll
+C:\Users\stefa\Desktop\New folder\Zadatak\ConsoleApp\bin\Debug\System.Data.SqlClient.dll
+C:\Users\stefa\Desktop\New folder\Zadatak\ConsoleApp\bin\Debug\EntityFramework.xml
+C:\Users\stefa\Desktop\New folder\Zadatak\ConsoleApp\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\stefa\Desktop\New folder\Zadatak\ConsoleApp\bin\Debug\Newtonsoft.Json.xml
+C:\Users\stefa\Desktop\New folder\Zadatak\ConsoleApp\obj\Debug\Zadatak.csprojAssemblyReference.cache
+C:\Users\stefa\Desktop\New folder\Zadatak\ConsoleApp\obj\Debug\Zadatak.csproj.CoreCompileInputs.cache
+C:\Users\stefa\Desktop\New folder\Zadatak\ConsoleApp\obj\Debug\Zadatak.csproj.CopyComplete
+C:\Users\stefa\Desktop\New folder\Zadatak\ConsoleApp\obj\Debug\Zadatak.exe
+C:\Users\stefa\Desktop\New folder\Zadatak\ConsoleApp\obj\Debug\Zadatak.pdb

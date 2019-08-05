@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ZadatakModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="DBElementC">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Grupa" Type="char" MaxLength="1" />
+    <Property Name="Vrednost" Type="int" />
+    <Property Name="IdElementP" Type="nvarchar" MaxLength="38" Nullable="false" />
+  </EntityType>
+  <EntityType Name="DBElementP">
+    <Key>
+      <PropertyRef Name="IdentifikacioniKod" />
+    </Key>
+    <Property Name="RedniBroj" Type="int" Nullable="false" />
+    <Property Name="IdentifikacioniKod" Type="nvarchar" MaxLength="38" Nullable="false" />
+    <Property Name="DateAndTimeAdded" Type="datetime" />
+    <Property Name="p" Type="int" Nullable="false" />
+  </EntityType>
+  <Association Name="FK_ElementC_ElementP">
+    <End Role="DBElementP" Type="Self.DBElementP" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="DBElementC" Type="Self.DBElementC" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DBElementP">
+        <PropertyRef Name="IdentifikacioniKod" />
+      </Principal>
+      <Dependent Role="DBElementC">
+        <PropertyRef Name="IdElementP" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="ZadatakModelStoreContainer">
+    <EntitySet Name="DBElementC" EntityType="Self.DBElementC" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="DBElementP" EntityType="Self.DBElementP" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_ElementC_ElementP" Association="Self.FK_ElementC_ElementP">
+      <End Role="DBElementP" EntitySet="DBElementP" />
+      <End Role="DBElementC" EntitySet="DBElementC" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>
