@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore.Internal;
 using Newtonsoft.Json;
 using WebZadatak.Models;
 
@@ -27,11 +28,20 @@ namespace WebZadatak.Controllers
 
             ZadatakContext db = new ZadatakContext();
 
-            List<DbelementP> ListdbelP = db.DbelementP
-                .Where(el => el.DateAndTimeAdded > Convert.ToDateTime(date))
-                .ToList<DbelementP>();
+            List<DbelementP> lista = db.DbelementP
+                .Where(el => el.DateAndTimeAdded > Convert.ToDateTime(date)).ToList();
 
-            var obj = JsonConvert.SerializeObject(ListdbelP);
+            foreach(DbelementP itemP in lista)
+            {
+                List<DbelementC> listaC = db.DbelementC.Where(el => el.IdElementP == itemP.IdentifikacioniKod).ToList();
+                foreach(DbelementC itemC in listaC)
+                {
+                    itemP.DbelementC.Add(itemC);
+                }
+            }    
+
+            var obj = JsonConvert.SerializeObject(lista, Formatting.Indented
+                , new JsonSerializerSettings { ReferenceLoopHandling = ReferenceLoopHandling.Ignore });
 
             return this.Content(obj);
         }
@@ -40,9 +50,9 @@ namespace WebZadatak.Controllers
         [ProducesResponseType(StatusCodes.Status201Created)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         //"json lista i da se pazi na identifikacioni kod, mozda ima isti u bazu a primarni je kljuc"
-        //"[{"RedniBroj":0,"IdentifikacioniKod":"2d9dfib0-cce9-4da5-af04-f58e4dfb9e5a","DateAndTimeAdded":"2019-08-04T21:03:18.903","P":2,"DbelementC":[{"Id":0,"Grupa":"t","Vrednost":6,"IdElementP":"d94076f1-c953-4899-9161-5a35cc505e77","DBElementP":null},{"Id":0,"Grupa":"s","Vrednost":8,"IdElementP":"d94076f1-c953-4899-9161-5a35cc505e77","DBElementP":null},{"Id":0,"Grupa":"n","Vrednost":6,"IdElementP":"d94076f1-c953-4899-9161-5a35cc505e77"}]},
-        //{"RedniBroj":1,"IdentifikacioniKod":"76affdcd-9d55-4j36-a082-9c48c5cd37dd","DateAndTimeAdded":"2019-08-04T21:03:19.383","P":2,"DbelementC":[{"Id":0,"Grupa":"t","Vrednost":6,"IdElementP":"d94076f1-c953-4899-9161-5a35cc505e77","DBElementP":null},{"Id":0,"Grupa":"s","Vrednost":8,"IdElementP":"d94076f1-c953-4899-9161-5a35cc505e77","DBElementP":null},{"Id":0,"Grupa":"n","Vrednost":6,"IdElementP":"d94076f1-c953-4899-9161-5a35cc505e77"}]},
-        //{"RedniBroj":2,"IdentifikacioniKod":"b0f66gda-1b44-4z51-838c-a3587d08f4ff","DateAndTimeAdded":"2019-08-04T21:03:19.387","P":2,"DbelementC":[{"Id":0,"Grupa":"t","Vrednost":6,"IdElementP":"d94076f1-c953-4899-9161-5a35cc505e77","DBElementP":null},{"Id":0,"Grupa":"s","Vrednost":8,"IdElementP":"d94076f1-c953-4899-9161-5a35cc505e77","DBElementP":null},{"Id":0,"Grupa":"n","Vrednost":6,"IdElementP":"d94076f1-c953-4899-9161-5a35cc505e77"}]}]"
+        //[{"RedniBroj":0,"IdentifikacioniKod":"2d9dfib0-cce9-4da5-af04-f58e4dfb9e5a","DateAndTimeAdded":"2019-08-04T21:03:18.903","P":2,"DbelementC":[{"Id":0,"Grupa":"t","Vrednost":6,"IdElementP":"d94076f1-c953-4899-9161-5a35cc505e77"},{"Id":0,"Grupa":"s","Vrednost":8,"IdElementP":"d94076f1-c953-4899-9161-5a35cc505e77"},{"Id":0,"Grupa":"n","Vrednost":6,"IdElementP":"d94076f1-c953-4899-9161-5a35cc505e77"}]},
+        //{"RedniBroj":1,"IdentifikacioniKod":"76affdcd-9d55-4j36-a082-9c48c5cd37dd","DateAndTimeAdded":"2019-08-04T21:03:19.383","P":2,"DbelementC":[{"Id":0,"Grupa":"t","Vrednost":6,"IdElementP":"d94076f1-c953-4899-9161-5a35cc505e77"},{"Id":0,"Grupa":"s","Vrednost":8,"IdElementP":"d94076f1-c953-4899-9161-5a35cc505e77"},{"Id":0,"Grupa":"n","Vrednost":6,"IdElementP":"d94076f1-c953-4899-9161-5a35cc505e77"}]},
+        //{"RedniBroj":2,"IdentifikacioniKod":"b0f66gda-1b44-4z51-838c-a3587d08f4ff","DateAndTimeAdded":"2019-08-04T21:03:19.387","P":2,"DbelementC":[{"Id":0,"Grupa":"t","Vrednost":6,"IdElementP":"d94076f1-c953-4899-9161-5a35cc505e77"},{"Id":0,"Grupa":"s","Vrednost":8,"IdElementP":"d94076f1-c953-4899-9161-5a35cc505e77"},{"Id":0,"Grupa":"n","Vrednost":6,"IdElementP":"d94076f1-c953-4899-9161-5a35cc505e77"}]}]
         public IActionResult Post([FromBody] Newtonsoft.Json.Linq.JArray ListaPretraga)
         {
            
@@ -57,7 +67,8 @@ namespace WebZadatak.Controllers
             }
             db.SaveChanges();
 
-            return this.Content(list[0].IdentifikacioniKod.ToString());
+
+            return this.Content(ListaPretraga.ToString());
         }
     }
 }

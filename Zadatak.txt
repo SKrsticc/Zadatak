@@ -1,0 +1,54 @@
+Dat je ElementP definisan na sledeci nacin:
+ElementP
+{
+	RedniBroj,  // Redni broj elementa u nizu
+	IdentifikacioniKod,		// Kod koji jednoznacno identifikuje element
+	Elementi:  [ ElementC ]  // Niz vrednosti
+}
+
+ElementC
+{
+	Grupa, // Karakter [a-z] malo latinicno
+	Vrednost	// Celobrojna vrednost [1-9]
+}
+
+Implementirati konzolnu aplikaciju koja generiše n elemenata tipa ElementP 
+koji sadrze po k elemenata tipa ElementC. 
+
+RedniBroj predstavlja redni broj generisanog elementa.
+IdentifikacioniKod predstavlja jedinstveni kljuc generisanog elementa.
+
+Grupa predstavlja nasumicno generisani karakter a-z.
+Vrednost je nasumicno generisani broj 1-9.
+
+Implementirati rešenje tako da je moguće uneti vrednosti n i k 
+sa tastature ili iz konfiguracionog fajla json formata. 
+Odabir ulaza (tastatura ili fajl) vršiti na startu aplikacije.
+
+Omogućiti pristup elementima po IdentifikacioniKod-u. Prilikom pristupa elementu stampati element u konzoli.
+
+Implementirati pretragu elemenata tipa ElementP takvog da je suma Vrednost ElementC veća od zadate vrednosti p. 
+Vrednost p se unosi sa tastature. Rezultat pretrage upisivati u bazu ili json fajl u zavisnosti od parametra output: string.
+(Prilikom poziva pretrage prosledjivati parametar p i parametar output).
+
+Projektovati bazu podataka koja omogućava smeštanje rezultata svake pojedinačne pretrage i vremena kada je pretraga izvrsena. 
+Implementirati REST api koristeći .net core web api koji omogućava:
+	Upis rezultata pretrage.
+	Čitanje zapamćenih pretraga iz baze gde je vreme pretrage veće od prosledjenog. Onemogućiti prosledjivanje vremena većeg od trenutnog.  
+	
+Bonus:
+Predvideti postojanje više ulaza (tastatura, fajl) i izlaza (api, fajl) od gore navedenih.
+
+connectionString="server=DESKTOP-P385AFG;Database=Zadatak;User Id=sa;Password=mssql"
+
+
+Scaffold-DbContext "Server=DESKTOP-P385AFG;Database=Zadatak;User Id=sa;Password=mssql;Trusted_Connection=True;" Microsoft.EntityFrameworkCore.SqlServer -OutputDir Models
+
+
+[{"RedniBroj":0,"IdentifikacioniKod":"2d9dfib0-cce9-4da5-af04-f58e4dfb9e5a","DateAndTimeAdded":"2019-08-04T21:03:18.903","P":2,"DbelementC":[{"Id":0,"Grupa":"t","Vrednost":6,"IdElementP":"d94076f1-c953-4899-9161-5a35cc505e77"},{"Id":0,"Grupa":"s","Vrednost":8,"IdElementP":"d94076f1-c953-4899-9161-5a35cc505e77"},{"Id":0,"Grupa":"n","Vrednost":6,"IdElementP":"d94076f1-c953-4899-9161-5a35cc505e77"}]},
+{"RedniBroj":1,"IdentifikacioniKod":"76affdcd-9d55-4j36-a082-9c48c5cd37dd","DateAndTimeAdded":"2019-08-04T21:03:19.383","P":2,"DbelementC":[{"Id":0,"Grupa":"t","Vrednost":6,"IdElementP":"d94076f1-c953-4899-9161-5a35cc505e77"},{"Id":0,"Grupa":"s","Vrednost":8,"IdElementP":"d94076f1-c953-4899-9161-5a35cc505e77"},{"Id":0,"Grupa":"n","Vrednost":6,"IdElementP":"d94076f1-c953-4899-9161-5a35cc505e77"}]},
+{"RedniBroj":2,"IdentifikacioniKod":"b0f66gda-1b44-4z51-838c-a3587d08f4ff","DateAndTimeAdded":"2019-08-04T21:03:19.387","P":2,"DbelementC":[{"Id":0,"Grupa":"t","Vrednost":6,"IdElementP":"d94076f1-c953-4899-9161-5a35cc505e77"},{"Id":0,"Grupa":"s","Vrednost":8,"IdElementP":"d94076f1-c953-4899-9161-5a35cc505e77"},{"Id":0,"Grupa":"n","Vrednost":6,"IdElementP":"d94076f1-c953-4899-9161-5a35cc505e77"}]}]
+
+
+
+

@@ -85,8 +85,8 @@ namespace Zadatak
                         {
                             if (el[i].SumaVrednosti() > p)
                             {
-
-                                var json = JsonConvert.SerializeObject(dto.PretvoriObjekat(el[i], p));
+                                var json = JsonConvert.SerializeObject(dto.PretvoriObjekat(el[i], p)
+                                    , new JsonSerializerSettings { NullValueHandling = NullValueHandling.Ignore });
                                 w.WriteLine(json);
                             }
                         }
@@ -95,6 +95,7 @@ namespace Zadatak
                 }
                 else if(string.Compare(output,"baza") == 0)
                 {
+                    ZadatakEntities db = new ZadatakEntities();
                     for (int i = 0; i < n; i++)
                     {
                         if (el[i].SumaVrednosti() > p)
@@ -102,8 +103,6 @@ namespace Zadatak
                             dto.SaveElementP(el[i], p);
                         }
                     }
-                    //List<DBElementP> ListdbelP = dto.ReadResults(Convert.ToDateTime("7-3-2018"));
-                    //Console.WriteLine(ListdbelP[0].IdentifikacioniKod);
                 }
             }
         }

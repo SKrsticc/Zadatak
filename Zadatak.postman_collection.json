@@ -1,0 +1,74 @@
+{
+	"info": {
+		"_postman_id": "6f66c9c9-b59a-4d79-8701-c33e3ef5eec6",
+		"name": "Zadatak",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://localhost:50308/api/elementp",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "        [{\"RedniBroj\":0,\"IdentifikacioniKod\":\"2d9dfib0-cce9-4da5-afe4-f58e4dfb9e5a\",\"DateAndTimeAdded\":\"2019-08-04T21:03:18.903\",\"P\":2,\"DbelementC\":[{\"Id\":0,\"Grupa\":\"t\",\"Vrednost\":6,\"IdElementP\":\"d94076f1-c953-4899-9161-5a35cc505e77\"},{\"Id\":0,\"Grupa\":\"s\",\"Vrednost\":8,\"IdElementP\":\"d94076f1-c953-4899-9161-5a35cc505e77\"},{\"Id\":0,\"Grupa\":\"n\",\"Vrednost\":6,\"IdElementP\":\"d94076f1-c953-4899-9161-5a35cc505e77\"}]},\r\n        {\"RedniBroj\":1,\"IdentifikacioniKod\":\"76affdcd-9d55-4j36-a0G2-9c48c5cd37dd\",\"DateAndTimeAdded\":\"2019-08-04T21:03:19.383\",\"P\":2,\"DbelementC\":[{\"Id\":0,\"Grupa\":\"t\",\"Vrednost\":6,\"IdElementP\":\"d94076f1-c953-4899-9161-5a35cc505e77\"},{\"Id\":0,\"Grupa\":\"s\",\"Vrednost\":8,\"IdElementP\":\"d94076f1-c953-4899-9161-5a35cc505e77\"},{\"Id\":0,\"Grupa\":\"n\",\"Vrednost\":6,\"IdElementP\":\"d94076f1-c953-4899-9161-5a35cc505e77\"}]},\r\n        {\"RedniBroj\":2,\"IdentifikacioniKod\":\"b0f66gda-1b44-4z51-8f8c-a3587d08f4ff\",\"DateAndTimeAdded\":\"2019-08-04T21:03:19.387\",\"P\":2,\"DbelementC\":[{\"Id\":0,\"Grupa\":\"t\",\"Vrednost\":6,\"IdElementP\":\"d94076f1-c953-4899-9161-5a35cc505e77\"},{\"Id\":0,\"Grupa\":\"s\",\"Vrednost\":8,\"IdElementP\":\"d94076f1-c953-4899-9161-5a35cc505e77\"},{\"Id\":0,\"Grupa\":\"n\",\"Vrednost\":6,\"IdElementP\":\"d94076f1-c953-4899-9161-5a35cc505e77\"}]}]"
+				},
+				"url": {
+					"raw": "http://localhost:50308/api/elementp",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "50308",
+					"path": [
+						"api",
+						"elementp"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:50308/api/elementp/",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"date\":\"7-3-2018\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:50308/api/elementp/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "50308",
+					"path": [
+						"api",
+						"elementp",
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
