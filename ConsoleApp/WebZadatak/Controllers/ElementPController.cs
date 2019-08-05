@@ -54,8 +54,7 @@ namespace WebZadatak.Controllers
         //{"RedniBroj":1,"IdentifikacioniKod":"76affdcd-9d55-4j36-a082-9c48c5cd37dd","DateAndTimeAdded":"2019-08-04T21:03:19.383","P":2,"DbelementC":[{"Id":0,"Grupa":"t","Vrednost":6,"IdElementP":"d94076f1-c953-4899-9161-5a35cc505e77"},{"Id":0,"Grupa":"s","Vrednost":8,"IdElementP":"d94076f1-c953-4899-9161-5a35cc505e77"},{"Id":0,"Grupa":"n","Vrednost":6,"IdElementP":"d94076f1-c953-4899-9161-5a35cc505e77"}]},
         //{"RedniBroj":2,"IdentifikacioniKod":"b0f66gda-1b44-4z51-838c-a3587d08f4ff","DateAndTimeAdded":"2019-08-04T21:03:19.387","P":2,"DbelementC":[{"Id":0,"Grupa":"t","Vrednost":6,"IdElementP":"d94076f1-c953-4899-9161-5a35cc505e77"},{"Id":0,"Grupa":"s","Vrednost":8,"IdElementP":"d94076f1-c953-4899-9161-5a35cc505e77"},{"Id":0,"Grupa":"n","Vrednost":6,"IdElementP":"d94076f1-c953-4899-9161-5a35cc505e77"}]}]
         public IActionResult Post([FromBody] Newtonsoft.Json.Linq.JArray ListaPretraga)
-        {
-           
+        {           
             List<DbelementP> list = 
                 JsonConvert.DeserializeObject<List<DbelementP>>(ListaPretraga.ToString());
 

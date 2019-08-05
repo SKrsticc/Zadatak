@@ -5,6 +5,8 @@ using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.IO;
 using System.Linq;
+using System.Net;
+using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -95,12 +97,49 @@ namespace Zadatak
                 }
                 else if(string.Compare(output,"baza") == 0)
                 {
-                    ZadatakEntities db = new ZadatakEntities();
-                    for (int i = 0; i < n; i++)
+                    Console.WriteLine("Izaberi upis u bazu: 1- konzolna app, 2- api");
+                    int brojbaza = validator.ValidateUlaz();
+
+                    if(brojbaza == 1)
                     {
-                        if (el[i].SumaVrednosti() > p)
+                        ZadatakEntities db = new ZadatakEntities();
+                        for (int i = 0; i < n; i++)
                         {
-                            dto.SaveElementP(el[i], p);
+                            if (el[i].SumaVrednosti() > p)
+                            {
+                                dto.SaveElementP(el[i], p);
+                            }
+                        }
+                    }
+                    else
+                    {
+                        List<DBElementP> DbelP = new List<DBElementP>();
+                        for (int i = 0; i < n; i++)
+                        {
+                            if (el[i].SumaVrednosti() > p)
+                            {
+                                DbelP.Add(dto.PretvoriObjekat(el[i], p));
+                            }
+                        }               
+
+                        string json = JsonConvert.SerializeObject(DbelP, Formatting.Indented
+                            , new JsonSerializerSettings { NullValueHandling = NullValueHandling.Ignore });
+
+                        var httpWebRequest = (HttpWebRequest)WebRequest.Create("http://localhost:50308/api/elementp");
+                        httpWebRequest.ContentType = "application/json";
+                        httpWebRequest.Method = "POST";
+
+                        using (var streamWriter = new StreamWriter(httpWebRequest.GetRequestStream()))
+                        {
+                            streamWriter.Write(json);
+                        }
+
+                        var httpResponse = (HttpWebResponse)httpWebRequest.GetResponse();
+
+                        using (var streamReader = new StreamReader(httpResponse.GetResponseStream()))
+                        {
+                            var result = streamReader.ReadToEnd();
+                            Console.WriteLine(result.ToString());
                         }
                     }
                 }
